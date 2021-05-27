@@ -1,0 +1,8 @@
+.text-field {
+    -fx-text-box-border: red ;
+    -fx-focus-color: red ;
+}
+
+.list-view{
+    -fx-background-color: blue;
+}
