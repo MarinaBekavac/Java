@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import com.gluonhq.charm.glisten.control.TextField?>-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.sample.PretragaZupanijaController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.80001220703124" minWidth="10.0" prefWidth="196.80001220703124" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.4" minWidth="10.0" prefWidth="218.4" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.39996337890625" minWidth="0.0" prefWidth="184.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="72.79999389648438" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="72.79999389648438" minHeight="10.0" prefHeight="26.39999618530274" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="130.40000381469727" minHeight="10.0" prefHeight="38.39998168945312" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="148.00000610351563" minHeight="10.0" prefHeight="46.40000610351565" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="146.39999389648438" minHeight="10.0" prefHeight="146.39999389648438" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+
+      <!---->
+      <fx:include fx:id="izbornik" source="izbornik.fxml" />
+      <!---->
+
+      <Label text="Pretraživanje županija" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label text="Naziv županije" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#pretraziZupanije" text="Pretraga" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <TableView fx:id="zupanijeTable" prefHeight="146.0" prefWidth="600.0" GridPane.columnSpan="3" GridPane.rowIndex="4">
+        <columns>
+            <TableColumn fx:id="nazivZupanijeColumn" prefWidth="242.39996337890625" text="Naziv županije" />
+          <TableColumn fx:id="brStanovnikaZupanijeColumn" prefWidth="137.60003662109375" text="Broj stanovnika" />
+          <TableColumn fx:id="brZarazenihZupanijeColumn" prefWidth="219.20001220703125" text="Broj zaraženih" />
+        </columns>
+      </TableView>
+      <TextField fx:id="nazivZupanije" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin></TextField>
+   </children>
+</GridPane>
