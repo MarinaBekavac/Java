@@ -1,0 +1,6 @@
+Temperatura
+Cesto
+Glavobolja
+Rijetko
+Grlobolja
+Srednje
